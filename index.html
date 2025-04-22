@@ -17,14 +17,21 @@
             align-items: center;
             overflow: hidden;
         }
-
+    
         .card-wrapper {
             perspective: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            box-sizing: border-box;
         }
-
+    
         .card {
-            width: 500px;
-            height: 500px;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 1 / 1;
             border-radius: 20px;
             background: #ffffffee;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -33,11 +40,11 @@
             cursor: pointer;
             position: relative;
         }
-
+    
         .card.opened {
             transform: rotateY(180deg);
         }
-
+    
         .card-face {
             position: absolute;
             width: 100%;
@@ -52,34 +59,34 @@
             flex-direction: column;
             text-align: center;
         }
-
+    
         .card-front {
             background: #fff9c4;
         }
-
+    
         .card-front h2 {
             font-size: 2.5rem;
             color: #ffb300;
             text-shadow: 0 0 5px #fff176;
         }
-
+    
         .card-back {
             background: #fff8e1;
             transform: rotateY(180deg);
             color: #6d4c41;
         }
-
+    
         .card-back p {
             font-size: 1.5rem;
             line-height: 1.5;
         }
-
+    
         .signature {
             margin-top: 15px;
             font-style: italic;
             color: #a1887f;
         }
-
+    
         /* Floating Hearts */
         .hearts {
             position: absolute;
@@ -90,7 +97,7 @@
             pointer-events: none;
             overflow: hidden;
         }
-
+    
         .heart {
             position: absolute;
             color: #ffeb3b;
@@ -98,23 +105,23 @@
             animation: float 6s infinite ease-in;
             opacity: 0.8;
         }
-
+    
         @keyframes float {
             0% {
                 transform: translateY(100vh) scale(1);
                 opacity: 0;
             }
-
+    
             50% {
                 opacity: 1;
             }
-
+    
             100% {
                 transform: translateY(-10vh) scale(1.3);
                 opacity: 0;
             }
         }
-
+    
         /* Floating Moon Phases */
         .moon-phases {
             position: absolute;
@@ -125,46 +132,71 @@
             pointer-events: none;
             overflow: hidden;
         }
-
+    
         .moon {
             position: absolute;
             font-size: 60px;
             animation: floatMoon 10s infinite ease-in;
             opacity: 0.8;
         }
-
+    
         .moon:nth-child(1) {
             animation-delay: 2s;
         }
-
+    
         .moon:nth-child(2) {
             animation-delay: 4s;
         }
-
+    
         .moon:nth-child(3) {
             animation-delay: 6s;
         }
-
+    
         .moon:nth-child(4) {
             animation-delay: 8s;
         }
-
+    
         @keyframes floatMoon {
             0% {
                 transform: translateY(100vh) scale(1);
                 opacity: 0;
             }
-
+    
             50% {
                 opacity: 1;
             }
-
+    
             100% {
                 transform: translateY(-10vh) scale(1.3);
                 opacity: 0;
             }
         }
+    
+        /* Responsive Styles */
+        @media (max-width: 480px) {
+           
+            .card-front h2 {
+                font-size: 1.5rem;
+            }
+    
+            .card-back p {
+                font-size: .7rem;
+            }
+    
+            .signature {
+                font-size: 0.7rem;
+            }
+    
+            .heart {
+                font-size: 20px !important;
+            }
+    
+            .moon {
+                font-size: 25px !important;
+            }
+        }
     </style>
+
 </head>
 
 <body>
@@ -177,10 +209,14 @@
             <div class="card-face card-back">
                 <p>
                     Happy Birthday Gieee! <span style="font-size:50px;">🌻</span><br><br>
+                    I just want to say that your smile has the power to light up the entire universe. (pak! atake pang-Miss Universe)
+                    I hope your birthday is as beautiful and kind as your heart.
                     You brighten the world just like a sunflower gracefully reaching for the sun.
                     May your special day be wrapped in warmth, radiant smiles, and delightful little surprises.
                     
                     You deserve nothing less than pure joy—today, and always. 🌻✨ <br>
+                    Thank you for everything so much appreciated talagaaaa sobra sobraaa. Alam mo na yon hahahahaha super grateful for all of your helpppp as in. You mean a lot to meee, hindi kana pwedeng mawala sa life ko. (usto mo sapok?)hahahahaha.<br>
+                    Lots of love! <br>
                     God bless you and take care always. 💛
                 </p>
                 <div class="signature">— From someone who thinks you're really special</div>
